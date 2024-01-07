@@ -1,5 +1,3 @@
-// Navbar.jsx
-
 import React, { useState, useRef, useEffect } from "react";
 import "./Navbar.css";
 import logo from "../../assets/Profile.png";
