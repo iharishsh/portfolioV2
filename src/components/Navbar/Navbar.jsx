@@ -2,7 +2,7 @@ import React, { useState, useRef, useEffect } from "react";
 import "./Navbar.css";
 import logo from "../../assets/Profile.png";
 
-const Navbar = ({ handleSectionChange }) => {
+const Navbar = () => {
   const [showMenu, setShowMenu] = useState(false);
   const menuRef = useRef(null);
 
@@ -25,17 +25,10 @@ const Navbar = ({ handleSectionChange }) => {
 
   return (
     <div className="navbar">
-      <div className="title navtext" onClick={() => handleSectionChange("home")}>
-        Iharishsh
-      </div>
+      <div className="title navtext">Iharishsh</div>
       <div className={`menu ${showMenu ? "show" : ""}`} ref={menuRef}>
         <ul>
-          <li
-            className="navtext"
-            onClick={() => handleSectionChange("skills")}
-          >
-            Skills
-          </li>
+          <li className="navtext">Skills</li>
           <li className="navtext">Projects</li>
           <li className="navtext">Experience</li>
           <li className="navtext">About</li>

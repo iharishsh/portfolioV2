@@ -5,3 +5,14 @@
   text-align: center;
 }
 
+html {
+  --cursor-color: #000000
+}
+
+html.dark-mode {
+  --cursor-color: #fff
+}
+
+* {
+  box-sizing: border-box;
+}
