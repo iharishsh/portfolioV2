@@ -3,7 +3,9 @@
 }
 
 .skills-container {
+  position: relative;
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
   height: 80vh;
@@ -12,4 +14,272 @@
 .skills-container img {
   max-width: 100%;
   max-height: 80vh;
+  z-index: 1; 
+}
+
+.rotate-button {
+  border-radius: 40px;
+  padding: 10px;
+  border: 1px solid black;
+  background-color: transparent;
+  z-index: 1; 
+  color: black;
+}
+
+.text-overlay {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 200px;
+  font-weight: bold;
+  z-index: 1;
+}
+
+.code-title {
+  color: rgb(114, 213, 255);
+}
+
+.design-title {
+  color: rgb(255, 236, 31);
+}
+
+.hidden {
+  display: none;
+}
+
+.code-img {
+  width: 13rem;
+  height: 8rem;
+  position: absolute;
+}
+
+.design-img {
+  width: 18rem;
+  height: 8rem;
+  position: absolute;
+}
+
+.html-img {
+  width: 4rem;
+  height: 4rem;
+  left: 15%;
+  top: 20%;
+  animation: leftToRightbounce 5s linear infinite; 
+}
+
+.css-img {
+  width: 3rem;
+  height: 3rem;
+  right: 35%;
+  top: 10%;
+  animation: rightToLeftbounce 5s linear infinite; 
+}
+
+.github-img {
+  width: 3rem;
+  height: 3rem;
+  left: 24%;
+  top: 43%;
+  animation: straightbounce 5s linear infinite; 
+}
+
+.bootstrap-img {
+  width: 3rem;
+  height: 3rem;
+  left: 15%;
+  bottom: 30%;
+  animation: rightToLeftbounce 5s linear infinite; 
+}
+
+.insomnia-img {
+  width: 3.5rem;
+  height: 3.5rem;
+  left: 35.5%;
+  top: 46%;
+  animation: straightbounce 5s linear infinite; 
+}
+
+.redux-img {
+  width: 4rem;
+  height: 4rem;
+  left: 30%;
+  bottom: 25%;
+  animation: leftToRightbounce 5s linear infinite; 
+}
+
+.vscode-img {
+  width: 3rem;
+  height: 3rem;
+  left: 33%;
+  top: 25%;
+  animation: rightToLeftbounce 5s linear infinite; 
+}
+
+.tailwindcss-img {
+  width: 3rem;
+  height: 3rem;
+  left: 40%;
+  top: 0%;
+  animation: rightToLeftbounce 5s linear infinite; 
+}
+
+.mongodb-img {
+  width: 3rem;
+  height: 3rem;
+  left: 49%;
+  top: 5%;
+  animation: rightToLeftbounce 5s linear infinite; 
+}
+
+.java-img {
+  width: 0.8rem;
+  height: 0.8rem;
+  left: 47%;
+  top: 60%;
+}
+
+.prettier-img {
+  width: 3rem;
+  height: 3rem;
+  right: 43%;
+  top: 30%;
+}
+
+.reactjs-img {
+  width: 2rem;
+  height: 2rem;
+  right: 45%;
+  top: 56%;
+}
+
+.nodejs-img {
+  width: 3rem;
+  height: 3rem;
+  right: 42%;
+  bottom: 25%;
+  animation: leftToRightbounce 5s linear infinite; 
+}
+
+.javascript-img {
+  width: 6rem;
+  height: 6rem;
+  right: 32%;
+  top: 33%;
+  animation: rightToLeftbounce 5s linear infinite; 
+}
+
+.postman-img {
+  width: 2rem;
+  height: 2rem;
+  left: 44%;
+  bottom: 0%;
+  animation: leftToRightbounce 5s linear infinite; 
+}
+
+.mysql-img {
+  width: 2rem;
+  height: 2rem;
+  right: 44%;
+  bottom: 0%;
+  animation: leftToRightbounce 5s linear infinite; 
+}
+
+.npm-img {
+  width: 1rem;
+  height: 1rem;
+  right: 33%;
+  bottom: 25%;
+  animation: straightbounce 5s linear infinite; 
+}
+
+.vitejs-img {
+  width: 4rem;
+  height: 4rem;
+  right: 20%;
+  top: 20%;
+  animation: rightToLeftbounce 5s linear infinite; 
+}
+
+.oracle-img {
+  width: 2rem;
+  height: 2rem;
+  right: 24%;
+  top: 47%;
+  animation: straightbounce 5s linear infinite; 
+}
+
+.springboot-img {
+  width: 3rem;
+  height: 3rem;
+  right: 20%;
+  bottom: 25%;
+  animation: rightToLeftbounce 5s linear infinite; 
+}
+
+.git-img {
+  width: 2rem;
+  height: 2rem;
+  right: 18%;
+  top: 47%;
+  animation: straightbounce 5s linear infinite; 
+}
+
+.canva-img {
+  width: 4rem;
+  height: 4rem;
+  right: 30%;
+  bottom: 20%;
+  animation: rightToLeftbounce 5s linear infinite; 
+}
+
+.figma-img {
+  width: 6rem;
+  height: 6rem;
+  left: 30%;
+  bottom: 20%;
+  animation: leftToRightbounce 5s linear infinite; 
+}
+
+.illustrator-img {
+  width: 5rem;
+  height: 5rem;
+  left: 24%;
+  top: 7%;
+  animation: rightToLeftbounce 5s linear infinite; 
+}
+
+.photoshop-img {
+  width: 4rem;
+  height: 4rem;
+  right: 34%;
+  top: 5%;
+  animation: leftToRightbounce 5s linear infinite; 
+}
+
+@keyframes leftToRightbounce {
+  0%, 100% {
+    transform: rotate(-15deg) translateY(0px); 
+  }
+  50% {
+    transform: rotate(-15deg) translateY(10px); 
+  }
+}
+
+@keyframes rightToLeftbounce {
+  0%, 100% {
+    transform: rotate(15deg) translateY(0px); 
+  }
+  50% {
+    transform: rotate(15deg) translateY(10px); 
+  }
+}
+
+@keyframes straightbounce {
+  0%, 100% {
+    transform: rotate(0deg) translateY(0px); 
+  }
+  50% {
+    transform: rotate(0deg) translateY(10px); 
+  }
 }

@@ -4,6 +4,7 @@ import Navbar from "./components/Navbar/Navbar";
 import Home from "./sections/Home/Home";
 import Skills from "./sections/Skills/Skills";
 import AnimatedCursor from "react-animated-cursor";
+import About from "./sections/About/About";
 
 function App() {
 
@@ -52,6 +53,7 @@ function App() {
       <Navbar />
       <Home />
       <Skills />
+      <About />
     </>
   );
 }

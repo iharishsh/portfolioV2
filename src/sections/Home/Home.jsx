@@ -17,7 +17,7 @@ const Home = () => {
         laptopImg.style.top = '0%'; 
       }
       // Adjust the image transform based on scroll position for the reverse parallax effect
-      laptopImg.style.transform = `translate(-50%, ${scrollPosition * 0.5}px) scale(${1 - scrollPosition * 0.001})`;
+      laptopImg.style.transform = `translate(-50%, ${scrollPosition * 0.7}px) scale(${1 - scrollPosition * 0.001})`;
     };    
 
     window.addEventListener('scroll', handleScroll);
