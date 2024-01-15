@@ -1,0 +1,126 @@
+.experience-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: left;
+  color: black;
+  margin: 20% auto;
+  position: relative; 
+}
+
+.experience-content {
+  padding: 20px 50px;
+}
+
+.experience-content .experience-heading {
+  padding-bottom: 15px;
+  text-align: center;
+}
+
+.experience-content .experience-subtitle {
+  font-size: 12px;
+}
+
+.experience-content .experience-sentence {
+  padding-bottom: 10px;
+}
+
+.experience-center-container {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+.experience-center-container h2 {
+  padding: 10px;
+  z-index: 1;
+}
+
+.experience-glass-card {
+  background: white;
+  background: linear-gradient(
+    to right bottom,
+    rgba(255, 255, 255, 0.4),
+    rgba(255, 255, 255, 0.2)
+  );
+  backdrop-filter: blur(1rem);
+  width: 60%;
+  height: 60%;
+  z-index: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 40px;
+  box-shadow: 0 0 1rem rgba(0, 0, 0, 0.2);
+}
+
+.experience-circle {
+  height: 5rem;
+  width: 5rem;
+  position: absolute;
+  border-radius: 50%;
+  z-index: 2;
+}
+
+.experience-circle {
+  top: 20%;
+  left: 23%;
+  transform: translate(-10%, -10%);
+}
+
+.experience-circle .company-logo {
+  width: 5rem;
+  height: 5rem;
+  object-fit: contain;
+  background-color: rgb(255, 255, 255);
+
+  border-radius: 20%;
+  box-shadow: 0 0 1rem rgba(0, 0, 0, 0.2);
+}
+
+.experience-circle1,
+.experience-circle2,
+.experience-circle3 {
+  height: 50rem;
+  width: 50rem;
+  position: absolute;
+  border-radius: 50%;
+}
+
+.experience-circle1 {
+  top: 10%;
+  left: 1%;
+  transform: translate(-120%, -10%);
+}
+
+.experience-circle1 .yellow-ellipse {
+  width: 50rem;
+  height: 50rem;
+}
+
+.experience-circle2 {
+  position: fixed;
+  top: 75%;
+  left: 80%;
+  transform: translate(50%, -50%);
+}
+
+.experience-circle2 .diamond-ellipse {
+  width: 50rem;
+  height: 50rem;
+}
+
+.experience-circle3 {
+  top: 25%;
+  left: 53%;
+  transform: translate(-50%, -50%);
+}
+
+.experience-circle3 .orange-ellipse {
+  width: 50rem;
+  height: 50rem;
+}

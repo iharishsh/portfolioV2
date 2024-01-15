@@ -49,7 +49,7 @@ const Skills = () => {
 
   return (
     <>
-      <section className="skills-container">
+      <section id="skills" className="skills-container">
         {/* Text overlays */}
         <div className={`text-overlay code-title ${rotate ? 'hidden' : ''}`}>Coding</div>
         <div className={`text-overlay design-title ${rotate ? '' : 'hidden'}`}>Design</div>

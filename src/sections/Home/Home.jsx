@@ -16,7 +16,6 @@ const Home = () => {
         laptopImg.style.transition = 'top 0.5s ease-out'; 
         laptopImg.style.top = '0%'; 
       }
-      // Adjust the image transform based on scroll position for the reverse parallax effect
       laptopImg.style.transform = `translate(-50%, ${scrollPosition * 0.7}px) scale(${1 - scrollPosition * 0.001})`;
     };    
 
@@ -28,7 +27,7 @@ const Home = () => {
   }, []);
 
   return (
-    <section className="home-container">
+    <section id='home' className="home-container">
       <img src={laptop} alt="Laptop" />
     </section>
   );

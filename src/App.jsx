@@ -5,6 +5,9 @@ import Home from "./sections/Home/Home";
 import Skills from "./sections/Skills/Skills";
 import AnimatedCursor from "react-animated-cursor";
 import About from "./sections/About/About";
+import Projects from "./sections/Projects/Projects";
+import Experience from "./sections/Experience/Experience";
+import Connect from "./sections/Connect/Connect";
 
 function App() {
 
@@ -54,6 +57,9 @@ function App() {
       <Home />
       <Skills />
       <About />
+      <Projects />
+      <Experience />
+      <Connect />
     </>
   );
 }

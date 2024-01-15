@@ -23,15 +23,36 @@ const Navbar = () => {
     setShowMenu(!showMenu);
   };
 
+  const scrollToSection = (sectionId) => {
+    const section = document.getElementById(sectionId);
+    if (section) {
+      section.scrollIntoView({ behavior: "smooth" });
+      setShowMenu(false); // Close the menu after clicking a menu item
+    }
+  };
+
   return (
     <div className="navbar">
-      <div className="title navtext">Iharishsh</div>
+      <div className="title navtext" onClick={() => scrollToSection("home")}>
+        Iharishsh
+      </div>
       <div className={`menu ${showMenu ? "show" : ""}`} ref={menuRef}>
         <ul>
-          <li className="navtext">Skills</li>
-          <li className="navtext">Projects</li>
-          <li className="navtext">Experience</li>
-          <li className="navtext">About</li>
+          <li className="navtext" onClick={() => scrollToSection("skills")}>
+            Skills
+          </li>
+          <li className="navtext" onClick={() => scrollToSection("projects")}>
+            Projects
+          </li>
+          <li
+            className="navtext"
+            onClick={() => scrollToSection("experience")}
+          >
+            Experience
+          </li>
+          <li className="navtext" onClick={() => scrollToSection("about")}>
+            About
+          </li>
         </ul>
       </div>
       <img className="logo" src={logo} onClick={toggleMenu} alt="Logo" />

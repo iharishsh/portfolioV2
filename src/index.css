@@ -7,6 +7,9 @@
   color: rgba(255, 255, 255, 0.87);
   --root-bg-color: #ffffff; 
   background-color: var(--root-bg-color);
+  --primary: #6a59ff;
+  --white: #ffffff;
+  --bg: #f5f5f5;
 
   font-synthesis: none;
   text-rendering: optimizeLegibility;

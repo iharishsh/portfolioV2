@@ -49,209 +49,209 @@
 }
 
 .code-img {
-  width: 13rem;
-  height: 8rem;
+  width: 18rem;
+  height: 13rem;
   position: absolute;
 }
 
 .design-img {
-  width: 18rem;
-  height: 8rem;
+  width: 23rem;
+  height: 13rem;
   position: absolute;
 }
 
 .html-img {
-  width: 4rem;
-  height: 4rem;
+  width: 8rem;
+  height: 8rem;
   left: 15%;
   top: 20%;
   animation: leftToRightbounce 5s linear infinite; 
 }
 
 .css-img {
-  width: 3rem;
-  height: 3rem;
+  width: 5rem;
+  height: 5rem;
   right: 35%;
   top: 10%;
   animation: rightToLeftbounce 5s linear infinite; 
 }
 
 .github-img {
-  width: 3rem;
-  height: 3rem;
+  width: 7rem;
+  height: 5rem;
   left: 24%;
   top: 43%;
   animation: straightbounce 5s linear infinite; 
 }
 
 .bootstrap-img {
-  width: 3rem;
-  height: 3rem;
+  width: 5rem;
+  height: 5rem;
   left: 15%;
   bottom: 30%;
   animation: rightToLeftbounce 5s linear infinite; 
 }
 
 .insomnia-img {
-  width: 3.5rem;
-  height: 3.5rem;
+  width: 6.5rem;
+  height: 5.5rem;
   left: 35.5%;
   top: 46%;
   animation: straightbounce 5s linear infinite; 
 }
 
 .redux-img {
-  width: 4rem;
-  height: 4rem;
+  width: 5rem;
+  height: 5rem;
   left: 30%;
   bottom: 25%;
   animation: leftToRightbounce 5s linear infinite; 
 }
 
 .vscode-img {
-  width: 3rem;
-  height: 3rem;
+  width: 5rem;
+  height: 5rem;
   left: 33%;
   top: 25%;
   animation: rightToLeftbounce 5s linear infinite; 
 }
 
 .tailwindcss-img {
-  width: 3rem;
-  height: 3rem;
+  width: 5rem;
+  height: 5rem;
   left: 40%;
   top: 0%;
   animation: rightToLeftbounce 5s linear infinite; 
 }
 
 .mongodb-img {
-  width: 3rem;
-  height: 3rem;
+  width: 5rem;
+  height: 5rem;
   left: 49%;
   top: 5%;
   animation: rightToLeftbounce 5s linear infinite; 
 }
 
 .java-img {
-  width: 0.8rem;
-  height: 0.8rem;
+  width: 2.4rem;
+  height: 1.2rem;
   left: 47%;
   top: 60%;
 }
 
 .prettier-img {
-  width: 3rem;
-  height: 3rem;
-  right: 43%;
+  width: 5rem;
+  height: 5rem;
+  right: 43.5%;
   top: 30%;
 }
 
 .reactjs-img {
-  width: 2rem;
-  height: 2rem;
+  width: 5rem;
+  height: 3rem;
   right: 45%;
   top: 56%;
 }
 
 .nodejs-img {
-  width: 3rem;
-  height: 3rem;
+  width: 5rem;
+  height: 5rem;
   right: 42%;
   bottom: 25%;
   animation: leftToRightbounce 5s linear infinite; 
 }
 
 .javascript-img {
-  width: 6rem;
-  height: 6rem;
+  width: 8rem;
+  height: 8rem;
   right: 32%;
   top: 33%;
   animation: rightToLeftbounce 5s linear infinite; 
 }
 
 .postman-img {
-  width: 2rem;
-  height: 2rem;
+  width: 4rem;
+  height: 4rem;
   left: 44%;
   bottom: 0%;
   animation: leftToRightbounce 5s linear infinite; 
 }
 
 .mysql-img {
-  width: 2rem;
-  height: 2rem;
+  width: 4rem;
+  height: 4rem;
   right: 44%;
   bottom: 0%;
   animation: leftToRightbounce 5s linear infinite; 
 }
 
 .npm-img {
-  width: 1rem;
-  height: 1rem;
+  width: 2rem;
+  height: 2rem;
   right: 33%;
   bottom: 25%;
   animation: straightbounce 5s linear infinite; 
 }
 
 .vitejs-img {
-  width: 4rem;
-  height: 4rem;
+  width: 6rem;
+  height: 6rem;
   right: 20%;
   top: 20%;
   animation: rightToLeftbounce 5s linear infinite; 
 }
 
 .oracle-img {
-  width: 2rem;
-  height: 2rem;
+  width: 5rem;
+  height: 3rem;
   right: 24%;
   top: 47%;
   animation: straightbounce 5s linear infinite; 
 }
 
 .springboot-img {
-  width: 3rem;
-  height: 3rem;
+  width: 5rem;
+  height: 5rem;
   right: 20%;
   bottom: 25%;
   animation: rightToLeftbounce 5s linear infinite; 
 }
 
 .git-img {
-  width: 2rem;
-  height: 2rem;
+  width: 4rem;
+  height: 4rem;
   right: 18%;
   top: 47%;
   animation: straightbounce 5s linear infinite; 
 }
 
 .canva-img {
-  width: 4rem;
-  height: 4rem;
+  width: 6rem;
+  height: 6rem;
   right: 30%;
   bottom: 20%;
   animation: rightToLeftbounce 5s linear infinite; 
 }
 
 .figma-img {
-  width: 6rem;
-  height: 6rem;
+  width: 8rem;
+  height: 8rem;
   left: 30%;
   bottom: 20%;
   animation: leftToRightbounce 5s linear infinite; 
 }
 
 .illustrator-img {
-  width: 5rem;
-  height: 5rem;
+  width: 7rem;
+  height: 7rem;
   left: 24%;
   top: 7%;
   animation: rightToLeftbounce 5s linear infinite; 
 }
 
 .photoshop-img {
-  width: 4rem;
-  height: 4rem;
+  width: 6rem;
+  height: 6rem;
   right: 34%;
   top: 5%;
   animation: leftToRightbounce 5s linear infinite; 
