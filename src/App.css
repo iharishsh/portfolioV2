@@ -43,7 +43,7 @@ html.dark-mode {
 }
 
 ::-webkit-scrollbar {
-  width: 1.3rem;
+  width: 1rem;
 }
 
 ::-webkit-scrollbar-thumb {

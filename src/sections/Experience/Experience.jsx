@@ -25,7 +25,6 @@ const Experience = () => {
 
     const handleScroll = () => {
       const scrollPosition = window.scrollY;
-      console.log(scrollPosition);
 
       if (scrollPosition > 2000 && scrollPosition < 2900) {
         const currentTranslateX = initialPosition - scrollPosition;
@@ -58,7 +57,6 @@ const Experience = () => {
         const scale3 = 1 - translateY3 * 0.0005;
         circle3Img.style.transition = "transform 0.3s ease";
         circle3Img.style.transform = `translate(-50%, ${translateY3}px) scale(${scale3})`;
-        console.log("circle3Img", circle3Img.style.transform);
         
       } else {
         // Reset transition when not in the specified range

@@ -8,6 +8,7 @@ import About from "./sections/About/About";
 import Projects from "./sections/Projects/Projects";
 import Experience from "./sections/Experience/Experience";
 import Connect from "./sections/Connect/Connect";
+import ScrollToTop from "./components/ScrollToTop/ScrollToTop";
 
 function App() {
 
@@ -40,8 +41,32 @@ function App() {
           'button',
           '.link',
           'li',
+          'img',
+          'p',
           {
             target: '.navtext',
+            options: {
+              innerSize: 12,
+              outerSize: 55,
+              color: '255, 255, 255',
+              outerAlpha: 0.3,
+              innerScale: 0.7,
+              outerScale: 5
+            }
+          },
+          {
+            target: '.scroll-to-top',
+            options: {
+              innerSize: 12,
+              outerSize: 55,
+              color: '255, 255, 255',
+              outerAlpha: 0.3,
+              innerScale: 0.7,
+              outerScale: 5
+            }
+          },
+          {
+            target: '.icon',
             options: {
               innerSize: 12,
               outerSize: 55,
@@ -54,6 +79,7 @@ function App() {
         ]}
       />
       <Navbar />
+      <ScrollToTop />
       <Home />
       <Skills />
       <About />

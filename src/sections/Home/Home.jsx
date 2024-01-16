@@ -1,6 +1,7 @@
 import React, { useEffect } from 'react';
 import './Home.css';
 import laptop from '../../assets/laptop.png';
+import Marquee from '../../components/Marquee/Marquee';
 
 const Home = () => {
   useEffect(() => {
@@ -29,6 +30,7 @@ const Home = () => {
   return (
     <section id='home' className="home-container">
       <img src={laptop} alt="Laptop" />
+      {/* <Marquee /> */}
     </section>
   );
 };
