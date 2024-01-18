@@ -1,8 +1,7 @@
 import "./Connect.css";
 import zaap from "../../assets/zaap.png";
-import ycircle from "../../assets/yellowcircle.png";
-import dcircle from "../../assets/diamondcircle.png";
-import ocircle from "../../assets/orangecircle.png";
+import x from "../../assets/x.svg";
+
 import { Copyright, GithubLogo, InstagramLogo, LinkedinLogo } from "@phosphor-icons/react";
 
 const Connect = () => {
@@ -20,6 +19,9 @@ const Connect = () => {
             </a>
             <a target='_blank' rel="noreferrer" alt="GithubLogo" title="Github" href='https://github.com/iharishsh'>
             <GithubLogo size={50}/>
+            </a>
+            <a target='_blank' rel="noreferrer" alt="ZaapLogo" title="Zaap" href='https://twitter.com/iharishsh'>
+            <img className="company-logo" src={x} />
             </a>
             <a target='_blank' rel="noreferrer" alt="ZaapLogo" title="Zaap" href='https://zaap.bio/iharishsh'>
             <img className="company-logo" src={zaap} />

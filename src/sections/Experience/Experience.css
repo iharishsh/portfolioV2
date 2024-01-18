@@ -13,9 +13,9 @@
   padding: 20px 50px;
 }
 
-.experience-content .experience-heading {
+.experience-content .experience-circle .experience-heading {
   padding-bottom: 15px;
-  text-align: center;
+  /* text-align: center; */
 }
 
 .experience-content .experience-subtitle {
@@ -56,21 +56,20 @@
   align-items: center;
   border-radius: 40px;
   box-shadow: 0 0 1rem rgba(0, 0, 0, 0.2);
+  margin: 5px;
 }
 
 .experience-circle {
-  height: 5rem;
-  width: 5rem;
-  position: absolute;
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+  /* height: 5rem;
+  width: 5rem; */
+  /* position: absolute; */
   border-radius: 50%;
   z-index: 2;
 }
 
-.experience-circle {
-  top: 20%;
-  left: 23%;
-  transform: translate(-10%, -10%);
-}
 
 .experience-circle .company-logo {
   width: 5rem;

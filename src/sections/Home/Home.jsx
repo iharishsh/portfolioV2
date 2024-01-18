@@ -30,7 +30,7 @@ const Home = () => {
   return (
     <section id='home' className="home-container">
       <img src={laptop} alt="Laptop" />
-      {/* <Marquee /> */}
+      <Marquee />
     </section>
   );
 };

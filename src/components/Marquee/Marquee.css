@@ -1,29 +1,34 @@
-.marquee__part {
-    flex-shrink: 0;
-    padding: 0 4px;
-    font-smooth: always;
-  }
-  
-  .marquee {
-    background: #000000;
-    color: #EEE;
-    text-transform: uppercase;
-    font-weight: 600;
-    font-size: 10px;
-    padding: 10px 0;
-  
-    position: relative;
-    overflow: hidden;
-  }
-  
-  .marquee__inner {
-    -webkit-font-smoothing: antialiased;
-      width: fit-content;
-      display: flex;
-      flex: auto;
-      flex-direction: row;
-  }
-  
-  .spacer {
-    height: 150px;
-  }
+@import url('https://fonts.googleapis.com/css2?family=Manrope&display=swap');
+
+.scroll{
+    height: 60vh;
+    font-size: 4rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.text-marquee {
+  position: relative;
+  display:flex; 
+  align-items:center;
+  overflow-x: hidden;
+  background-color: black;
+}
+
+.text-single {
+  position: relative;
+  white-space: nowrap;
+  padding: 0;
+  margin: 0;
+  will-change: transform;
+}
+
+.text {
+  padding: 0;
+  font-size: 3rem;
+  display: inline-block;
+  margin-right: 2rem;
+  font-family: 'Manrope', sans-serif;
+  font-weight: bold;
+}
