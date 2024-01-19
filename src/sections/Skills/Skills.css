@@ -36,6 +36,17 @@
   z-index: 1;
 }
 
+.skill-title {
+  position: absolute;
+  color: rgb(0, 0, 0); 
+  top: 68%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 20px;
+  z-index: 2;
+  font-weight:500;
+}
+
 .code-title {
   color: rgb(114, 213, 255);
 }
@@ -79,7 +90,7 @@
 .github-img {
   width: 7rem;
   height: 5rem;
-  left: 24%;
+  left: 25%;
   top: 43%;
   animation: straightbounce 5s linear infinite; 
 }
@@ -95,7 +106,7 @@
 .insomnia-img {
   width: 6.5rem;
   height: 5.5rem;
-  left: 35.5%;
+  left: 36%;
   top: 46%;
   animation: straightbounce 5s linear infinite; 
 }
@@ -204,7 +215,7 @@
 .oracle-img {
   width: 5rem;
   height: 3rem;
-  right: 24%;
+  right: 24.9%;
   top: 47%;
   animation: straightbounce 5s linear infinite; 
 }

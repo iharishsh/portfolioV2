@@ -1,6 +1,6 @@
 import React, { useEffect } from 'react';
 import './Home.css';
-import laptop from '../../assets/laptop.png';
+import laptop from '../../assets/macIphone.png';
 import Marquee from '../../components/Marquee/Marquee';
 
 const Home = () => {
@@ -15,7 +15,7 @@ const Home = () => {
         laptopImg.style.top = '50%'; 
       } else {
         laptopImg.style.transition = 'top 0.5s ease-out'; 
-        laptopImg.style.top = '0%'; 
+        laptopImg.style.top = '20%'; 
       }
       laptopImg.style.transform = `translate(-50%, ${scrollPosition * 0.7}px) scale(${1 - scrollPosition * 0.001})`;
     };    

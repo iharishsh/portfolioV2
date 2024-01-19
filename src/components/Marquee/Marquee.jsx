@@ -114,10 +114,10 @@ const Marquee = () => {
 
       <div className="text-marquee">
         <div className="text-single">
-          <span className="text js-text">Discover.Design.Develop.Deploy</span>
-          <span className="text js-text">Discover.Design.Develop.Deploy</span>
-          <span className="text js-text">Discover.Design.Develop.Deploy</span>
-          <span className="text js-text">Discover.Design.Develop.Deploy</span>
+          <span className="text js-text">Dive.Discover.Design.Develop.Deploy.Delight</span>
+          <span className="text js-text">Dive.Discover.Design.Develop.Deploy.Delight</span>
+          <span className="text js-text">Dive.Discover.Design.Develop.Deploy.Delight</span>
+          <span className="text js-text">Dive.Discover.Design.Develop.Deploy.Delight</span>
         </div>
       </div>
 
