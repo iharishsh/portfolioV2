@@ -58,8 +58,8 @@ const Skills = () => {
         {/* Rotating image */}
         {rotate ? (
         <>
-        <img src={cup} alt="Cup" style={cupStyle} />
-        <img src={graph} alt="Graph" className="design-img" />
+        <img src={cup} alt="Cup" className="cup-img" style={cupStyle} />
+        <img src={graph} alt="Graph" className="design-img graph-img" />
         <img src={canva} alt="Canva" title="Canva" className="design-img canva-img" />
         <img src={figma} alt="Figma" title="Figma" className="design-img figma-img" />
         <img src={illustrator} alt="Illustrator" title="Illustrator" className="design-img illustrator-img" />
@@ -67,8 +67,8 @@ const Skills = () => {
         </>
       ) : (
         <>
-        <img src={cup} alt="Cup" style={cupStyle} />
-        <img src={dev} alt="Dev" className="code-img" />
+        <img src={cup} alt="Cup" className="cup-img" style={cupStyle} />
+        <img src={dev} alt="Dev" className="code-img dev-img" />
         <img src={html} alt="Html" title="Html" className="code-img html-img" />
         <img src={css} alt="Css" title="Css" className="code-img css-img" />
         <img src={github} alt="Github" title="Github" className="code-img github-img" />

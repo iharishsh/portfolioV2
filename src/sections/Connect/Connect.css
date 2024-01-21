@@ -55,3 +55,23 @@ a {
   bottom: 0;
   padding-bottom: 5px;
 }
+
+@media (max-width: 768px) {
+  .connect-glass-card {
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    text-align: center;
+    width: 50%;
+  }
+
+  .company-logo {
+    margin-top: 10px;
+  }
+
+  .footer {
+    flex-direction: row;
+    text-align: center;
+    gap: 5px;
+  }
+}

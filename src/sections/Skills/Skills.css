@@ -1,20 +1,37 @@
-.skills-title {
-  color: black;
-}
-
 .skills-container {
   position: relative;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  height: 80vh;
+  height: 100vh;
 }
 
 .skills-container img {
   max-width: 100%;
   max-height: 80vh;
-  z-index: 1; 
+  z-index: 1;
+}
+
+.skills-container .cup-img {
+  max-width: 100%;
+  max-height: 80vh;
+  z-index: 1;
+  position: absolute;
+}
+
+@media (max-width: 750px) {
+  .skills-container .cup-img {
+    transition: left 0.5s ease-out;
+    left: -20%;
+  }
+}
+
+@media (max-width: 550px) {
+  .skills-container .cup-img {
+    transition: left 0.5s ease-out;
+    left: -50%;
+  }
 }
 
 .rotate-button {
@@ -22,8 +39,23 @@
   padding: 10px;
   border: 1px solid black;
   background-color: transparent;
-  z-index: 1; 
+  z-index: 1;
+  margin-top: 35%;
   color: black;
+}
+
+@media (max-width: 750px) {
+  .rotate-button {
+    transition: margin-top 0.5s ease-out;
+    margin-top: 55%;
+  }
+}
+
+@media (max-width: 550px) {
+  .rotate-button {
+    transition: margin-top 0.5s ease-out;
+    margin-top: 150%;
+  }
 }
 
 .text-overlay {
@@ -33,18 +65,33 @@
   transform: translate(-50%, -50%);
   font-size: 200px;
   font-weight: bold;
+  transition: font-size 0.5s ease-out;
   z-index: 1;
+}
+
+@media (max-width: 750px) {
+  .text-overlay {
+    transition: font-size 0.5s ease-out;
+    font-size: 140px;
+  }
+}
+
+@media (max-width: 550px) {
+  .text-overlay {
+    transition: font-size 0.5s ease-out;
+    font-size: 90px;
+  }
 }
 
 .skill-title {
   position: absolute;
-  color: rgb(0, 0, 0); 
+  color: rgb(0, 0, 0);
   top: 68%;
   left: 50%;
   transform: translate(-50%, -50%);
   font-size: 20px;
   z-index: 2;
-  font-weight:500;
+  font-weight: 500;
 }
 
 .code-title {
@@ -65,6 +112,20 @@
   position: absolute;
 }
 
+@media (max-width: 750px) {
+  .dev-img {
+    transition: left 0.5s ease-out;
+    left: -5%;
+  }
+}
+
+@media (max-width: 550px) {
+  .dev-img {
+    transition: left 0.5s ease-out;
+    left: -9%;
+  }
+}
+
 .design-img {
   width: 23rem;
   height: 13rem;
@@ -76,23 +137,66 @@
   height: 8rem;
   left: 15%;
   top: 20%;
-  animation: leftToRightbounce 5s linear infinite; 
+  animation: leftToRightbounce 5s linear infinite;
+}
+
+@media (max-width: 750px) {
+  .html-img {
+    width: 5rem;
+    height: 5rem;
+    transition: left 0.5s ease-out;
+    left: 9%;
+  }
 }
 
 .css-img {
   width: 5rem;
   height: 5rem;
   right: 35%;
-  top: 10%;
-  animation: rightToLeftbounce 5s linear infinite; 
+  top: 20%;
+  animation: rightToLeftbounce 5s linear infinite;
+}
+
+@media (max-width: 750px) {
+  .css-img {
+    width: 3rem;
+    height: 3rem;
+    transition: right 0.5s ease-out;
+    right: 9%;
+  }
+}
+
+@media (max-width: 550px) {
+  .css-img {
+    transition: top 0.5s ease-out;
+    top: 23%;
+  }
 }
 
 .github-img {
   width: 7rem;
   height: 5rem;
   left: 25%;
-  top: 43%;
-  animation: straightbounce 5s linear infinite; 
+  top: 44%;
+  animation: straightbounce 5s linear infinite;
+}
+
+@media (max-width: 750px) {
+  .github-img {
+    width: 5rem;
+    height: 3rem;
+    transition: left 0.5s ease-out;
+    top: 45%;
+    left: 18%;
+  }
+}
+
+@media (max-width: 550px) {
+  .github-img {
+    transition: left 0.5s ease-out;
+    top: 38%;
+    left: 2%;
+  }
 }
 
 .bootstrap-img {
@@ -100,15 +204,50 @@
   height: 5rem;
   left: 15%;
   bottom: 30%;
-  animation: rightToLeftbounce 5s linear infinite; 
+  animation: rightToLeftbounce 5s linear infinite;
+}
+
+@media (max-width: 750px) {
+  .bootstrap-img {
+    width: 5rem;
+    height: 3rem;
+    transition: bottom 0.5s ease-out;
+    bottom: 20%;
+  }
+}
+
+@media (max-width: 550px) {
+  .bootstrap-img {
+    transition: bottom 0.5s ease-out;
+    bottom: 30%;
+  }
 }
 
 .insomnia-img {
   width: 6.5rem;
   height: 5.5rem;
   left: 36%;
-  top: 46%;
-  animation: straightbounce 5s linear infinite; 
+  top: 47%;
+  animation: straightbounce 5s linear infinite;
+}
+
+@media (max-width: 750px) {
+  .insomnia-img {
+    width: 5rem;
+    height: 4rem;
+    transition: left 0.5s ease-out;
+    left: 32%;
+  }
+}
+
+@media (max-width: 550px) {
+  .insomnia-img {
+    width: 3rem;
+    height: 3rem;
+    transition: left 0.5s ease-out;
+    top: 48%;
+    left: 27.5%;
+  }
 }
 
 .redux-img {
@@ -116,7 +255,23 @@
   height: 5rem;
   left: 30%;
   bottom: 25%;
-  animation: leftToRightbounce 5s linear infinite; 
+  animation: leftToRightbounce 5s linear infinite;
+}
+
+@media (max-width: 750px) {
+  .redux-img {
+    width: 4rem;
+    height: 4rem;
+    transition: left 0.5s ease-out;
+    left: 25%;
+  }
+}
+
+@media (max-width: 550px) {
+  .redux-img {
+    transition: left 0.5s ease-out;
+    left: 29%;
+  }
 }
 
 .vscode-img {
@@ -124,44 +279,141 @@
   height: 5rem;
   left: 33%;
   top: 25%;
-  animation: rightToLeftbounce 5s linear infinite; 
+  animation: rightToLeftbounce 5s linear infinite;
+}
+
+@media (max-width: 750px) {
+  .vscode-img {
+    width: 4rem;
+    height: 4rem;
+    transition: left 0.5s ease-out;
+    left: 25%;
+  }
+}
+
+@media (max-width: 550px) {
+  .vscode-img {
+    transition: left 0.5s ease-out;
+    left: 29%;
+  }
 }
 
 .tailwindcss-img {
   width: 5rem;
   height: 5rem;
   left: 40%;
-  top: 0%;
-  animation: rightToLeftbounce 5s linear infinite; 
+  top: 15%;
+  animation: rightToLeftbounce 5s linear infinite;
+}
+
+@media (max-width: 750px) {
+  .tailwindcss-img {
+    width: 4rem;
+    height: 4rem;
+    transition: top 0.5s ease-out;
+    top: 30%;
+  }
+}
+
+@media (max-width: 550px) {
+  .tailwindcss-img {
+    transition: top 0.5s ease-out;
+    top: 40%;
+  }
 }
 
 .mongodb-img {
   width: 5rem;
   height: 5rem;
   left: 49%;
-  top: 5%;
-  animation: rightToLeftbounce 5s linear infinite; 
+  top: 16%;
+  animation: rightToLeftbounce 5s linear infinite;
+}
+
+@media (max-width: 750px) {
+  .mongodb-img {
+    width: 4rem;
+    height: 4rem;
+    transition: top 0.5s ease-out;
+    top: 30%;
+  }
+}
+
+@media (max-width: 550px) {
+  .mongodb-img {
+    transition: top 0.5s ease-out;
+    top: 40%;
+  left: 55%;
+  }
 }
 
 .java-img {
   width: 2.4rem;
   height: 1.2rem;
   left: 47%;
-  top: 60%;
+  top: 58%;
+}
+
+@media (max-width: 750px) {
+  .java-img {
+    transition: left 0.5s ease-out;
+    top: 60%;
+    left: 2%;
+  }
+}
+
+@media (max-width: 550px) {
+  .java-img {
+    transition: left 0.5s ease-out;
+    top: 56%;
+    left: 5.5%;
+  }
 }
 
 .prettier-img {
   width: 5rem;
   height: 5rem;
   right: 43.5%;
-  top: 30%;
+  top: 35%;
+}
+
+@media (max-width: 750px) {
+  .prettier-img {
+    transition: left 0.5s ease-out;
+    width: 3rem;
+    height: 3rem;
+    left: 11%;
+  }
+}
+
+@media (max-width: 550px) {
+  .prettier-img {
+    transition: left 0.5s ease-out;
+  top: 41%;
+    left: 24%;
+  }
 }
 
 .reactjs-img {
   width: 5rem;
   height: 3rem;
   right: 45%;
-  top: 56%;
+  top: 55%;
+}
+
+@media (max-width: 750px) {
+  .reactjs-img {
+    transition: left 0.5s ease-out;
+    left: 9%;
+  }
+}
+
+@media (max-width: 550px) {
+  .reactjs-img {
+    transition: left 0.5s ease-out;
+  top: 54%;
+  left: 18%;
+  }
 }
 
 .nodejs-img {
@@ -169,31 +421,102 @@
   height: 5rem;
   right: 42%;
   bottom: 25%;
-  animation: leftToRightbounce 5s linear infinite; 
+  animation: leftToRightbounce 5s linear infinite;
+}
+
+@media (max-width: 750px) {
+  .nodejs-img {
+    transition: bottom 0.5s ease-out;
+    width: 3rem;
+    bottom: 33%;
+    height: 3rem;
+  }
+}
+
+@media (max-width: 550px) {
+  .nodejs-img {
+    transition: bottom 0.5s ease-out;
+    bottom: 38%;
+  }
 }
 
 .javascript-img {
   width: 8rem;
   height: 8rem;
   right: 32%;
-  top: 33%;
-  animation: rightToLeftbounce 5s linear infinite; 
+  top: 43%;
+  animation: rightToLeftbounce 5s linear infinite;
+}
+
+@media (max-width: 750px) {
+  .javascript-img {
+    transition: right 0.5s ease-out;
+    height: 5rem;
+    right: 38%;
+    width: 5rem;
+  }
+}
+
+@media (max-width: 550px) {
+  .javascript-img {
+    transition: right 0.5s ease-out;
+    height: 4rem;
+    right: 25%;
+  top: 45%;
+  width: 4rem;
+  }
 }
 
 .postman-img {
   width: 4rem;
   height: 4rem;
   left: 44%;
-  bottom: 0%;
-  animation: leftToRightbounce 5s linear infinite; 
+  bottom: 10%;
+  animation: leftToRightbounce 5s linear infinite;
+}
+
+@media (max-width: 750px) {
+  .postman-img {
+    transition: bottom 0.5s ease-out;
+    left: 42%;
+    height: 3rem;
+    bottom: 20%;
+    width: 3rem;
+  }
+}
+
+@media (max-width: 550px) {
+  .postman-img {
+    transition: bottom 0.5s ease-out;
+    left: 30%;
+    bottom: 13%;
+  }
 }
 
 .mysql-img {
   width: 4rem;
   height: 4rem;
   right: 44%;
-  bottom: 0%;
-  animation: leftToRightbounce 5s linear infinite; 
+  bottom: 10%;
+  animation: leftToRightbounce 5s linear infinite;
+}
+
+@media (max-width: 750px) {
+  .mysql-img {
+    transition: bottom 0.5s ease-out;
+    right: 42%;
+    height: 3rem;
+    bottom: 20%;
+    width: 3rem;
+  }
+}
+
+@media (max-width: 550px) {
+  .mysql-img {
+    transition: bottom 0.5s ease-out;
+    right: 30%;
+    bottom: 13%;
+  }
 }
 
 .npm-img {
@@ -201,7 +524,7 @@
   height: 2rem;
   right: 33%;
   bottom: 25%;
-  animation: straightbounce 5s linear infinite; 
+  animation: straightbounce 5s linear infinite;
 }
 
 .vitejs-img {
@@ -209,15 +532,47 @@
   height: 6rem;
   right: 20%;
   top: 20%;
-  animation: rightToLeftbounce 5s linear infinite; 
+  animation: rightToLeftbounce 5s linear infinite;
+}
+
+@media (max-width: 750px) {
+  .vitejs-img {
+    transition: right 0.5s ease-out;
+    right: 24%;
+    width: 3rem;
+    height: 3rem;
+  }
+}
+
+@media (max-width: 550px) {
+  .vitejs-img {
+    transition: top 0.5s ease-out;
+    top: 30%;
+  }
 }
 
 .oracle-img {
   width: 5rem;
   height: 3rem;
   right: 24.9%;
-  top: 47%;
-  animation: straightbounce 5s linear infinite; 
+  top: 48%;
+  animation: straightbounce 5s linear infinite;
+}
+
+@media (max-width: 750px) {
+  .oracle-img {
+    transition: right 0.5s ease-out;
+    right: 49.5%;
+    width: 3rem;
+    height: 3rem;
+  }
+}
+
+@media (max-width: 550px) {
+  .oracle-img {
+    transition: right 0.5s ease-out;
+    right: 48%;
+  }
 }
 
 .springboot-img {
@@ -225,7 +580,24 @@
   height: 5rem;
   right: 20%;
   bottom: 25%;
-  animation: rightToLeftbounce 5s linear infinite; 
+  animation: rightToLeftbounce 5s linear infinite;
+}
+
+@media (max-width: 750px) {
+  .springboot-img {
+    transition: right 0.5s ease-out;
+    width: 3rem;
+    right: 23%;
+    height: 3rem;
+  }
+}
+
+@media (max-width: 550px) {
+  .springboot-img {
+    transition: right 0.5s ease-out;
+    right: 20%;
+    bottom: 35%;
+  }
 }
 
 .git-img {
@@ -233,7 +605,38 @@
   height: 4rem;
   right: 18%;
   top: 47%;
-  animation: straightbounce 5s linear infinite; 
+  animation: straightbounce 5s linear infinite;
+}
+
+@media (max-width: 750px) {
+  .git-img {
+    transition: right 0.5s ease-out;
+    height: 3rem;
+    width: 3rem;
+    right: 10%;
+  }
+}
+
+@media (max-width: 550px) {
+  .git-img {
+    transition: right 0.5s ease-out;
+    right: 3%;
+  top: 48%;
+  }
+}
+
+@media (max-width: 750px) {
+  .graph-img {
+    transition: left 0.5s ease-out;
+    left: -10%;
+  }
+}
+
+@media (max-width: 550px) {
+  .graph-img {
+    transition: left 0.5s ease-out;
+    left: -20%;
+  }
 }
 
 .canva-img {
@@ -241,7 +644,15 @@
   height: 6rem;
   right: 30%;
   bottom: 20%;
-  animation: rightToLeftbounce 5s linear infinite; 
+  animation: rightToLeftbounce 5s linear infinite;
+}
+
+@media (max-width: 750px) {
+  .canva-img {
+    transition: width 0.5s ease-out;
+    width: 4rem;
+    height: 4rem;
+  }
 }
 
 .figma-img {
@@ -249,48 +660,77 @@
   height: 8rem;
   left: 30%;
   bottom: 20%;
-  animation: leftToRightbounce 5s linear infinite; 
+  animation: leftToRightbounce 5s linear infinite;
+}
+
+@media (max-width: 750px) {
+  .figma-img {
+    transition: width 0.5s ease-out;
+    width: 5rem;
+    height: 5rem;
+  }
 }
 
 .illustrator-img {
   width: 7rem;
   height: 7rem;
   left: 24%;
-  top: 7%;
-  animation: rightToLeftbounce 5s linear infinite; 
+  top: 18%;
+  animation: rightToLeftbounce 5s linear infinite;
+}
+
+@media (max-width: 750px) {
+  .illustrator-img {
+    transition: top 0.5s ease-out;
+    top: 20%;
+    width: 5rem;
+    height: 5rem;
+  }
 }
 
 .photoshop-img {
   width: 6rem;
   height: 6rem;
   right: 34%;
-  top: 5%;
-  animation: leftToRightbounce 5s linear infinite; 
+  top: 20%;
+  animation: leftToRightbounce 5s linear infinite;
+}
+
+@media (max-width: 750px) {
+  .photoshop-img {
+    transition: top 0.5s ease-out;
+    top: 23%;
+    width: 5rem;
+    height: 5rem;
+  }
 }
 
 @keyframes leftToRightbounce {
-  0%, 100% {
-    transform: rotate(-15deg) translateY(0px); 
+  0%,
+  100% {
+    transform: rotate(-15deg) translateY(0px);
   }
   50% {
-    transform: rotate(-15deg) translateY(10px); 
+    transform: rotate(-15deg) translateY(10px);
   }
 }
 
 @keyframes rightToLeftbounce {
-  0%, 100% {
-    transform: rotate(15deg) translateY(0px); 
+  0%,
+  100% {
+    transform: rotate(15deg) translateY(0px);
   }
   50% {
-    transform: rotate(15deg) translateY(10px); 
+    transform: rotate(15deg) translateY(10px);
   }
 }
 
 @keyframes straightbounce {
-  0%, 100% {
-    transform: rotate(0deg) translateY(0px); 
+  0%,
+  100% {
+    transform: rotate(0deg) translateY(0px);
   }
   50% {
-    transform: rotate(0deg) translateY(10px); 
+    transform: rotate(0deg) translateY(10px);
   }
 }

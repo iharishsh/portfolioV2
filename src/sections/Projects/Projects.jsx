@@ -1,5 +1,6 @@
-import React, { useState } from "react";
+import React, { useState, useEffect, useRef } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
+import { useSpring, animated } from "react-spring";
 
 import "swiper/css";
 import "swiper/css/effect-coverflow";
@@ -21,10 +22,11 @@ import {
   LinkBreak,
   XCircle,
 } from "@phosphor-icons/react";
-import projectsData from "./projectsData.js"; // Import the projects data
+import projectsData from "./projectsData.js"; 
 
 const Projects = () => {
   const [modalVisible, setModalVisible] = useState(false);
+  const swiperRef = useRef(null);
   const [selectedSlide, setSelectedSlide] = useState(null);
   const [selectedSlideImgs, setSelectedSlideImgs] = useState([]); 
   const [selectedSlideTitle, setSelectedSlideTitle] = useState(null);
@@ -36,6 +38,10 @@ const Projects = () => {
   const [selectedSlidePara2, setSelectedSlidePara2] = useState(null);
   const [selectedSlidePara3, setSelectedSlidePara3] = useState(null);
   const [selectedSlidePara4, setSelectedSlidePara4] = useState(null);
+
+  const modalAnimation = useSpring({
+    transform: modalVisible ? "translateY(0%)" : "translateY(100%)",
+  });
 
   const openModal = (slide) => {
     setSelectedSlide(slide.cover);
@@ -57,6 +63,25 @@ const Projects = () => {
     setModalVisible(false);
   };
 
+  useEffect(() => {
+    const body = document.body;
+
+    if (modalVisible && swiperRef.current) {
+      body.classList.add("modal-open");
+      // Pause autoplay when modal is open
+      swiperRef.current.autoplay.stop();
+    } else {
+      body.classList.remove("modal-open");
+      // Resume autoplay when modal is closed
+      swiperRef.current?.autoplay.start();
+    }
+
+    return () => {
+      // Cleanup: Remove the class when the component is unmounted
+      body.classList.remove("modal-open");
+    };
+  }, [modalVisible]);
+
   return (
     <section id="projects" className="container">
       <h1 className="heading">Projects</h1>
@@ -65,6 +90,7 @@ const Projects = () => {
         grabCursor={true}
         centeredSlides={true}
         loop={true}
+        onSwiper={(swiper) => (swiperRef.current = swiper)} 
         autoplay={{
           delay: 2500,
           disableOnInteraction: false,
@@ -112,7 +138,7 @@ const Projects = () => {
 
       {/* Modal */}
       {modalVisible && (
-        <div className="modal-overlay">
+        <animated.div style={modalAnimation} className="modal-overlay">
           <div className="modal">
           <div className="modal-left">
         <div className="scrollable-content">
@@ -140,7 +166,6 @@ const Projects = () => {
               <p style={{ fontSize: "13px" }}>{selectedSlideDesc}</p>
               <div style={{ textAlign: "left" }}>
                 <ul>
-                  {/* <li style={{ padding: "10px" }}>{selectedSlidePara1}</li> */}
                   <li style={{ padding: "10px" }} dangerouslySetInnerHTML={{ __html: selectedSlidePara1 }} />
                   <li style={{ padding: "10px" }} dangerouslySetInnerHTML={{ __html: selectedSlidePara2 }} />
                   <li style={{ padding: "10px" }} dangerouslySetInnerHTML={{ __html: selectedSlidePara3 }} />
@@ -178,14 +203,13 @@ const Projects = () => {
               </div>
             </div>
             <XCircle
-              className="icon"
-              style={{ right: 0 }}
+              className="icon x-icon"
               onClick={closeModal}
               size={30}
               color="black"
             />
           </div>
-        </div>
+          </animated.div>
       )}
     </section>
   );
