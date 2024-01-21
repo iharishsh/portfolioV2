@@ -24,15 +24,14 @@
   .about-container img {
     width: 30%;
     height: 35%;
-    margin-top: 80px;
+    margin-top: 70px;
     transform: translateY(-10%);
   }
   
-  @media (max-width: 750px) {
+  @media (max-width: 835px) {
     .about-container img {
-      width: 70%;
-      height: 35%;
-      margin-top: 80px;
+      width: 50%;
+      height: auto;
       transform: translateY(-10%);
     }
   }

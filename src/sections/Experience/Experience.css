@@ -6,8 +6,9 @@
   text-align: left;
   color: black;
   margin: 20% auto;
-  height: 100vh;
+  height: 120vh;
   position: relative;
+  overflow: hidden;
 }
 
 .experience-content {
@@ -132,6 +133,7 @@
 @media (max-width: 768px) {
   .experience-container {
     margin: 10% auto;
+    height: auto;
   }
 
   .experience-glass-card {

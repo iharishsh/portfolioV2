@@ -17,7 +17,7 @@ const About = () => {
         img.style.transform = `translateY(0%)`;
       } else {
         img.style.transition = 'transform 0.5s ease-out'; 
-        img.style.transform = `translateY(90%)`;
+        img.style.transform = `translateY(80%)`;
       }
 
       lastScrollPosition = scrollPosition;

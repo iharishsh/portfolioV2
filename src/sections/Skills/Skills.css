@@ -176,7 +176,7 @@
 .github-img {
   width: 7rem;
   height: 5rem;
-  left: 25%;
+  left: 16%;
   top: 44%;
   animation: straightbounce 5s linear infinite;
 }
@@ -187,7 +187,7 @@
     height: 3rem;
     transition: left 0.5s ease-out;
     top: 45%;
-    left: 18%;
+    left: 25%;
   }
 }
 
@@ -195,7 +195,7 @@
   .github-img {
     transition: left 0.5s ease-out;
     top: 38%;
-    left: 2%;
+    left: 25%;
   }
 }
 
@@ -224,10 +224,10 @@
 }
 
 .insomnia-img {
-  width: 6.5rem;
-  height: 5.5rem;
+  width: 5rem;
+  height: 5rem;
   left: 36%;
-  top: 47%;
+  bottom: 27%;
   animation: straightbounce 5s linear infinite;
 }
 
@@ -245,16 +245,16 @@
     width: 3rem;
     height: 3rem;
     transition: left 0.5s ease-out;
-    top: 48%;
+    bottom: 37%;
     left: 27.5%;
   }
 }
 
 .redux-img {
-  width: 5rem;
-  height: 5rem;
-  left: 30%;
-  bottom: 25%;
+  width: 3rem;
+  height: 3rem;
+  left: 35%;
+  bottom: 15%;
   animation: leftToRightbounce 5s linear infinite;
 }
 
@@ -343,15 +343,16 @@
   .mongodb-img {
     transition: top 0.5s ease-out;
     top: 40%;
-  left: 55%;
+    left: 55%;
   }
 }
 
 .java-img {
-  width: 2.4rem;
-  height: 1.2rem;
+  width: 4rem;
+  height: 4rem;
   left: 47%;
-  top: 58%;
+  bottom: 20%;
+  animation: rightToLeftbounce 5s linear infinite;
 }
 
 @media (max-width: 750px) {
@@ -362,59 +363,41 @@
   }
 }
 
-@media (max-width: 550px) {
-  .java-img {
-    transition: left 0.5s ease-out;
-    top: 56%;
-    left: 5.5%;
-  }
-}
 
 .prettier-img {
-  width: 5rem;
-  height: 5rem;
-  right: 43.5%;
-  top: 35%;
+  width: 3rem;
+  height: 3rem;
+  right: 30%;
+  top: 33%;
+  animation: rightToLeftbounce 5s linear infinite;
 }
 
 @media (max-width: 750px) {
   .prettier-img {
     transition: left 0.5s ease-out;
-    width: 3rem;
-    height: 3rem;
-    left: 11%;
+    right: 45%;
   }
 }
 
-@media (max-width: 550px) {
-  .prettier-img {
-    transition: left 0.5s ease-out;
-  top: 41%;
-    left: 24%;
-  }
-}
 
 .reactjs-img {
-  width: 5rem;
-  height: 3rem;
-  right: 45%;
-  top: 55%;
+  width: 7rem;
+  height: 7rem;
+  left: 25%;
+  bottom: 25%;
+  animation: rightToLeftbounce 5s linear infinite;
 }
 
 @media (max-width: 750px) {
   .reactjs-img {
     transition: left 0.5s ease-out;
-    left: 9%;
-  }
+    width: 5rem;
+    height: 5rem;
+  left: 40%;
+  bottom: 20%;
+}
 }
 
-@media (max-width: 550px) {
-  .reactjs-img {
-    transition: left 0.5s ease-out;
-  top: 54%;
-  left: 18%;
-  }
-}
 
 .nodejs-img {
   width: 5rem;
@@ -441,31 +424,21 @@
 }
 
 .javascript-img {
-  width: 8rem;
-  height: 8rem;
+  width: 5rem;
+  height: 5rem;
   right: 32%;
-  top: 43%;
+  bottom: 30%;
   animation: rightToLeftbounce 5s linear infinite;
 }
 
 @media (max-width: 750px) {
   .javascript-img {
     transition: right 0.5s ease-out;
-    height: 5rem;
-    right: 38%;
-    width: 5rem;
+  bottom: 23%;
+  right: 25%;
   }
 }
 
-@media (max-width: 550px) {
-  .javascript-img {
-    transition: right 0.5s ease-out;
-    height: 4rem;
-    right: 25%;
-  top: 45%;
-  width: 4rem;
-  }
-}
 
 .postman-img {
   width: 4rem;
@@ -478,20 +451,13 @@
 @media (max-width: 750px) {
   .postman-img {
     transition: bottom 0.5s ease-out;
-    left: 42%;
+    left: 4%;
     height: 3rem;
     bottom: 20%;
     width: 3rem;
   }
 }
 
-@media (max-width: 550px) {
-  .postman-img {
-    transition: bottom 0.5s ease-out;
-    left: 30%;
-    bottom: 13%;
-  }
-}
 
 .mysql-img {
   width: 4rem;
@@ -504,26 +470,19 @@
 @media (max-width: 750px) {
   .mysql-img {
     transition: bottom 0.5s ease-out;
-    right: 42%;
+    right: 4%;
     height: 3rem;
     bottom: 20%;
     width: 3rem;
   }
 }
 
-@media (max-width: 550px) {
-  .mysql-img {
-    transition: bottom 0.5s ease-out;
-    right: 30%;
-    bottom: 13%;
-  }
-}
 
 .npm-img {
   width: 2rem;
   height: 2rem;
   right: 33%;
-  bottom: 25%;
+  bottom: 15%;
   animation: straightbounce 5s linear infinite;
 }
 
@@ -554,9 +513,9 @@
 .oracle-img {
   width: 5rem;
   height: 3rem;
-  right: 24.9%;
-  top: 48%;
-  animation: straightbounce 5s linear infinite;
+  right: 50%;
+  top: 18%;
+  animation: leftToRightbounce 5s linear infinite;
 }
 
 @media (max-width: 750px) {
@@ -621,7 +580,7 @@
   .git-img {
     transition: right 0.5s ease-out;
     right: 3%;
-  top: 48%;
+    top: 48%;
   }
 }
 
