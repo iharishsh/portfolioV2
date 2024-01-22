@@ -27,7 +27,7 @@ const projectsData = [
     title: 'Portfolio',
     cover: portfoliov2,
     imgs: [],
-    description: 'First version of my portfolio',
+    description: 'Second version of my portfolio',
     projectOverview: {
       keyFeatures: [
         "<b>Design Inspiration</b>: Inspired by Minh Pham, the portfolio embodies a clean and visually appealing design.",
