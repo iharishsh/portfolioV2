@@ -34,10 +34,10 @@ const Projects = () => {
   const [selectedSlideTech, setSelectedSlideTech] = useState([]);
   const [selectedSlideGithub, setSelectedSlideGithub] = useState(null);
   const [selectedSlideSite, setSelectedSlideSite] = useState(null);
-  const [selectedSlidePara1, setSelectedSlidePara1] = useState(null);
-  const [selectedSlidePara2, setSelectedSlidePara2] = useState(null);
-  const [selectedSlidePara3, setSelectedSlidePara3] = useState(null);
-  const [selectedSlidePara4, setSelectedSlidePara4] = useState(null);
+  const [selectedSlideFeature, setSelectedSlideFeature] = useState([]);
+  const [selectedSlideGoalsAchieved, setSelectedSlideGoalsAchieved] = useState([]);
+  const [selectedSlideFuturePlans, setSelectedSlideFuturePlans] = useState([]);
+  const [selectedSlideStatus, setSelectedSlideStatus] = useState([]);
 
   const modalAnimation = useSpring({
     transform: modalVisible ? "translateY(0%)" : "translateY(100%)",
@@ -51,10 +51,10 @@ const Projects = () => {
     setSelectedSlideTech(slide.tech);
     setSelectedSlideGithub(slide.githubLink);
     setSelectedSlideSite(slide.siteLink);
-    setSelectedSlidePara1(slide.para1);
-    setSelectedSlidePara2(slide.para2);
-    setSelectedSlidePara3(slide.para3);
-    setSelectedSlidePara4(slide.para4);
+    setSelectedSlideFeature(slide.projectOverview.keyFeatures);
+    setSelectedSlideGoalsAchieved(slide.projectOverview.goalsAchieved);
+    setSelectedSlideFuturePlans(slide.projectOverview.futurePlans);
+    setSelectedSlideStatus(slide.projectOverview.status);
     setModalVisible(true);
   };
 
@@ -89,7 +89,7 @@ const Projects = () => {
         effect={"coverflow"}
         grabCursor={true}
         centeredSlides={true}
-        loop={true}
+        // loop={true}
         onSwiper={(swiper) => (swiperRef.current = swiper)} 
         autoplay={{
           delay: 2500,
@@ -166,10 +166,22 @@ const Projects = () => {
               <p style={{ fontSize: "13px" }}>{selectedSlideDesc}</p>
               <div style={{ textAlign: "left" }}>
                 <ul>
-                  <li style={{ padding: "10px" }} dangerouslySetInnerHTML={{ __html: selectedSlidePara1 }} />
-                  <li style={{ padding: "10px" }} dangerouslySetInnerHTML={{ __html: selectedSlidePara2 }} />
-                  <li style={{ padding: "10px" }} dangerouslySetInnerHTML={{ __html: selectedSlidePara3 }} />
-                  <li style={{ padding: "10px" }} dangerouslySetInnerHTML={{ __html: selectedSlidePara4 }} />
+                 <h4 style={{ paddingTop: "10px",  paddingBottom: "10px" }}>Features:</h4>
+                  {selectedSlideFeature.map((feature, index) => (
+                  <li key={index} dangerouslySetInnerHTML={{ __html: feature }} />
+                ))}
+                  <h4 style={{ paddingTop: "10px",  paddingBottom: "10px" }}>Goals Achieved:</h4>
+                  {selectedSlideGoalsAchieved.map((goalsAchieved, index) => (
+                  <li key={index} dangerouslySetInnerHTML={{ __html: goalsAchieved }} />
+                ))}
+                 <h4 style={{ paddingTop: "10px",  paddingBottom: "10px" }}>Future Plans:</h4>
+                  {selectedSlideFuturePlans.map((futurePlans, index) => (
+                  <li key={index} dangerouslySetInnerHTML={{ __html: futurePlans }} />
+                ))}
+                <h4 style={{ paddingTop: "10px",  paddingBottom: "10px" }}>Status:</h4>
+                  {selectedSlideStatus.map((status, index) => (
+                  <li key={index} dangerouslySetInnerHTML={{ __html: status }} />
+                ))}
                 </ul>
               </div>
               <div className="tech-icons">

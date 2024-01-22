@@ -35,7 +35,6 @@ const Marquee = () => {
     const handleScroll = () => {
       let direction = (window.scrollY > currentScrollRef.current) ? 1 : -1;
       if (direction !== scrollDirectionRef.current) {
-        console.log("change", direction);
         loopsRef.current.forEach(tl => {
           gsap.to(tl, { timeScale: direction, overwrite: true });
         });
