@@ -1,6 +1,6 @@
 import React, { useState, useEffect, useRef } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
-import { useSpring, animated } from "react-spring";
+import { useTransition, animated } from "react-spring";
 
 import "swiper/css";
 import "swiper/css/effect-coverflow";
@@ -22,13 +22,13 @@ import {
   LinkBreak,
   XCircle,
 } from "@phosphor-icons/react";
-import projectsData from "./projectsData.js"; 
+import projectsData from "./projectsData.js";
 
 const Projects = () => {
   const [modalVisible, setModalVisible] = useState(false);
   const swiperRef = useRef(null);
   const [selectedSlide, setSelectedSlide] = useState(null);
-  const [selectedSlideImgs, setSelectedSlideImgs] = useState([]); 
+  const [selectedSlideImgs, setSelectedSlideImgs] = useState([]);
   const [selectedSlideTitle, setSelectedSlideTitle] = useState(null);
   const [selectedSlideDesc, setSelectedSlideDesc] = useState(null);
   const [selectedSlideTech, setSelectedSlideTech] = useState([]);
@@ -39,8 +39,16 @@ const Projects = () => {
   const [selectedSlideFuturePlans, setSelectedSlideFuturePlans] = useState([]);
   const [selectedSlideStatus, setSelectedSlideStatus] = useState([]);
 
-  const modalAnimation = useSpring({
-    transform: modalVisible ? "translateY(0%)" : "translateY(100%)",
+  const transitions = useTransition(modalVisible, {
+    from: { transform: "translateY(100%)"},
+    enter: { transform: "translateY(0%)"},
+    leave: { transform: "translateY(100%)"},
+    onRest: () => {
+      if (!modalVisible) {
+        // Clean up the state after the modal has completely closed
+        setSelectedSlide(null);
+      }
+    },
   });
 
   const openModal = (slide) => {
@@ -59,26 +67,39 @@ const Projects = () => {
   };
 
   const closeModal = () => {
-    setSelectedSlide(null);
     setModalVisible(false);
+  };
+
+  const handleOverlayClick = (e) => {
+    // Close the modal only if the click target is the overlay itself (not its children)
+    if (e.target.classList.contains("modal-overlay")) {
+      closeModal();
+    }
   };
 
   useEffect(() => {
     const body = document.body;
 
+    const handleEscapeKey = (e) => {
+      // Close the modal on pressing the "Escape" key
+      if (e.key === "Escape") {
+        closeModal();
+      }
+    };
+
     if (modalVisible && swiperRef.current) {
       body.classList.add("modal-open");
-      // Pause autoplay when modal is open
       swiperRef.current.autoplay.stop();
+      document.addEventListener("keydown", handleEscapeKey);
     } else {
       body.classList.remove("modal-open");
-      // Resume autoplay when modal is closed
       swiperRef.current?.autoplay.start();
+      document.removeEventListener("keydown", handleEscapeKey);
     }
 
     return () => {
-      // Cleanup: Remove the class when the component is unmounted
       body.classList.remove("modal-open");
+      document.removeEventListener("keydown", handleEscapeKey);
     };
   }, [modalVisible]);
 
@@ -90,7 +111,7 @@ const Projects = () => {
         grabCursor={true}
         centeredSlides={true}
         // loop={true}
-        onSwiper={(swiper) => (swiperRef.current = swiper)} 
+        onSwiper={(swiper) => (swiperRef.current = swiper)}
         autoplay={{
           delay: 2500,
           disableOnInteraction: false,
@@ -137,91 +158,123 @@ const Projects = () => {
       </Swiper>
 
       {/* Modal */}
-      {modalVisible && (
-        <animated.div style={modalAnimation} className="modal-overlay">
-          <div className="modal">
-          <div className="modal-left">
-        <div className="scrollable-content">
-          <img
-            className="slide-cover"
-            src={selectedSlide}
-            alt="selected_slide_cover"
-          />
-          <div style={{display: 'flex', flexDirection: 'row'}}>
-          {selectedSlideImgs.map((techImgs, index) => (
-            <img
-              className="slide-imgs"
-              key={index}
-              src={techImgs}
-              width={30}
-              height={30}
-              alt={`selected_slide_images_${index}`}
-            />
-          ))}
-          </div>
-        </div>
-      </div>
-            <div className="modal-right">
-              <h4>{selectedSlideTitle}</h4>
-              <p style={{ fontSize: "13px" }}>{selectedSlideDesc}</p>
-              <div style={{ textAlign: "left" }}>
-                <ul>
-                 <h4 style={{ paddingTop: "10px",  paddingBottom: "10px" }}>Features:</h4>
-                  {selectedSlideFeature.map((feature, index) => (
-                  <li key={index} dangerouslySetInnerHTML={{ __html: feature }} />
-                ))}
-                  <h4 style={{ paddingTop: "10px",  paddingBottom: "10px" }}>Goals Achieved:</h4>
-                  {selectedSlideGoalsAchieved.map((goalsAchieved, index) => (
-                  <li key={index} dangerouslySetInnerHTML={{ __html: goalsAchieved }} />
-                ))}
-                 <h4 style={{ paddingTop: "10px",  paddingBottom: "10px" }}>Future Plans:</h4>
-                  {selectedSlideFuturePlans.map((futurePlans, index) => (
-                  <li key={index} dangerouslySetInnerHTML={{ __html: futurePlans }} />
-                ))}
-                <h4 style={{ paddingTop: "10px",  paddingBottom: "10px" }}>Status:</h4>
-                  {selectedSlideStatus.map((status, index) => (
-                  <li key={index} dangerouslySetInnerHTML={{ __html: status }} />
-                ))}
-                </ul>
+      {transitions(
+        (styles, item) =>
+          item && (
+            <animated.div
+              key="modal"
+              style={styles}
+              onClick={handleOverlayClick}
+              className="modal-overlay"
+            >
+              <div className="modal">
+                <div className="modal-left">
+                  <div className="scrollable-content">
+                    <img
+                      className="slide-cover"
+                      src={selectedSlide}
+                      alt="selected_slide_cover"
+                    />
+                    <div style={{ display: "flex", flexDirection: "row" }}>
+                      {selectedSlideImgs.map((techImgs, index) => (
+                        <img
+                          className="slide-imgs"
+                          key={index}
+                          src={techImgs}
+                          width={30}
+                          height={30}
+                          alt={`selected_slide_images_${index}`}
+                        />
+                      ))}
+                    </div>
+                  </div>
+                </div>
+                <div className="modal-right">
+                  <h4>{selectedSlideTitle}</h4>
+                  <p style={{ fontSize: "13px" }}>{selectedSlideDesc}</p>
+                  <div style={{ textAlign: "left" }}>
+                    <ul>
+                      <h4 style={{ paddingTop: "10px", paddingBottom: "10px" }}>
+                        Features:
+                      </h4>
+                      {selectedSlideFeature.map((feature, index) => (
+                        <li
+                          key={index}
+                          dangerouslySetInnerHTML={{ __html: feature }}
+                        />
+                      ))}
+                      <h4 style={{ paddingTop: "10px", paddingBottom: "10px" }}>
+                        Goals Achieved:
+                      </h4>
+                      {selectedSlideGoalsAchieved.map((goalsAchieved, index) => (
+                        <li
+                          key={index}
+                          dangerouslySetInnerHTML={{ __html: goalsAchieved }}
+                        />
+                      ))}
+                      <h4 style={{ paddingTop: "10px", paddingBottom: "10px" }}>
+                        Future Plans:
+                      </h4>
+                      {selectedSlideFuturePlans.map((futurePlans, index) => (
+                        <li
+                          key={index}
+                          dangerouslySetInnerHTML={{ __html: futurePlans }}
+                        />
+                      ))}
+                      <h4 style={{ paddingTop: "10px", paddingBottom: "10px" }}>
+                        Status:
+                      </h4>
+                      {selectedSlideStatus.map((status, index) => (
+                        <li
+                          key={index}
+                          dangerouslySetInnerHTML={{ __html: status }}
+                        />
+                      ))}
+                    </ul>
+                  </div>
+                  <div className="tech-icons">
+                    <p>Tech Stacks: </p>
+                    {selectedSlideTech.map((techIcon, index) => (
+                      <img
+                        key={index}
+                        src={techIcon}
+                        width={30}
+                        height={30}
+                        alt={`tech_icon_${index}`}
+                      />
+                    ))}
+                  </div>
+                  <div className="link-row icon">
+                    <p>Links: </p>
+                    {selectedSlideGithub && (
+                      <a
+                        href={selectedSlideGithub}
+                        target="_blank"
+                        rel="noreferrer"
+                      >
+                        <GithubLogo size={30} color="black" />
+                      </a>
+                    )}
+                    {selectedSlideSite && (
+                      <a
+                        href={selectedSlideSite}
+                        target="_blank"
+                        rel="noreferrer"
+                      >
+                        <LinkBreak size={30} color="black" />
+                      </a>
+                    )}
+                  </div>
+                </div>
+                <XCircle
+                  className="icon x-icon"
+                  onClick={closeModal}
+                  size={30}
+                  color="black"
+                />
               </div>
-              <div className="tech-icons">
-                <p>Tech Stacks: </p>
-                {selectedSlideTech.map((techIcon, index) => (
-                  <img
-                    key={index}
-                    src={techIcon}
-                    width={30}
-                    height={30}
-                    alt={`tech_icon_${index}`}
-                  />
-                ))}
-              </div>
-              <div className="link-row icon">
-                <p>Links: </p>
-                {selectedSlideGithub && (
-                  <a
-                    href={selectedSlideGithub}
-                    target="_blank"
-                    rel="noreferrer"
-                  >
-                    <GithubLogo size={30} color="black" />
-                  </a>
-                )}
-                {selectedSlideSite && (
-                  <a href={selectedSlideSite} target="_blank" rel="noreferrer">
-                    <LinkBreak size={30} color="black" />
-                  </a>
-                )}
-              </div>
-            </div>
-            <XCircle
-              className="icon x-icon"
-              onClick={closeModal}
-              size={30}
-              color="black"
-            />
-          </div>
-          </animated.div>
+            </animated.div>
+          )
       )}
     </section>
   );

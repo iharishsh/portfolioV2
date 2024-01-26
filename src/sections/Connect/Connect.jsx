@@ -1,5 +1,5 @@
 import "./Connect.css";
-import zaap from "../../assets/zaap.png";
+import bento from "../../assets/bento.png";
 import x from "../../assets/x.svg";
 
 import { Copyright, GithubLogo, InstagramLogo, LinkedinLogo } from "@phosphor-icons/react";
@@ -20,11 +20,11 @@ const Connect = () => {
             <a target='_blank' rel="noreferrer" alt="GithubLogo" title="Github" href='https://github.com/iharishsh'>
             <GithubLogo size={50}/>
             </a>
-            <a target='_blank' rel="noreferrer" alt="ZaapLogo" title="Zaap" href='https://twitter.com/iharishsh'>
+            <a target='_blank' rel="noreferrer" alt="XLogo" title="X" href='https://twitter.com/iharishsh'>
             <img className="company-logo" src={x} />
             </a>
-            <a target='_blank' rel="noreferrer" alt="ZaapLogo" title="Zaap" href='https://zaap.bio/iharishsh'>
-            <img className="company-logo" src={zaap} />
+            <a target='_blank' rel="noreferrer" alt="bentoLogo" title="Bento" href='https://bento.me/iharishsh'>
+            <img className="company-logo" src={bento} />
             </a>
           </div>
         </div>

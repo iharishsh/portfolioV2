@@ -13,6 +13,10 @@
   .para {
     padding-inline: 20%;
   }
+
+  .para2 {
+    padding-top: 20px;
+  }
   
   @media (max-width: 750px) {
     .para {

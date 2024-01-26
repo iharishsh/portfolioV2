@@ -35,8 +35,10 @@ const About = () => {
       <h2 className='about-title'>ABOUT ME</h2>
       <div className='para'>
         <p>I’m a growing <b>Developer</b> and <b>Designer</b>, passionate about crafting quality digital experiences through a blend of design creativity and code.</p>
+        <div className='para2'>
         <p>So What I’m doing now?</p>
         <p>"Coding the canvas of creativity, one pixel at a time."</p>
+        </div>
       </div>
       <img src={workspace} alt="Workspace" />
     </section>
