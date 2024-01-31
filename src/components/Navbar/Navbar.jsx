@@ -1,4 +1,4 @@
-import React, { useState, useRef, useEffect } from "react";
+import { useState, useRef, useEffect } from "react";
 import "./Navbar.css";
 import logo from "../../assets/Profile.png";
 
@@ -27,7 +27,7 @@ const Navbar = () => {
     const section = document.getElementById(sectionId);
     if (section) {
       section.scrollIntoView({ behavior: "smooth" });
-      setShowMenu(false); // Close the menu after clicking a menu item
+      setShowMenu(false); 
     }
   };
 
@@ -42,7 +42,7 @@ const Navbar = () => {
             Skills
           </li>
           <li className="navtext" onClick={() => scrollToSection("projects")}>
-            Projects
+            Proje
           </li>
           <li
             className="navtext"

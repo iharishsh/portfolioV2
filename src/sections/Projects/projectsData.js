@@ -1,5 +1,3 @@
-// projectsData.js
-
 import portfoliov2 from '../../assets/projects/portfoliov2/cover.png';
 
 import nike from '../../assets/projects/nike/cover.png';

@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import "./Skills.css";
 import cup from "../../assets/cup.png";
 //code

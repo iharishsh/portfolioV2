@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import { useEffect } from 'react';
 import './Home.css';
 import laptop from '../../assets/macIphone.png';
 import Marquee from '../../components/Marquee/Marquee';

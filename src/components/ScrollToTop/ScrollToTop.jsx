@@ -1,6 +1,6 @@
-import React, { useState, useEffect } from 'react';
+import { useState, useEffect } from 'react';
 import { ArrowFatUp } from '@phosphor-icons/react';
-import './ScrollToTop.css'; // Add your CSS styles for the ScrollToTop button
+import './ScrollToTop.css';
 
 const ScrollToTop = () => {
   const [isVisible, setIsVisible] = useState(false);
@@ -8,7 +8,7 @@ const ScrollToTop = () => {
   // Check if the user has scrolled down a certain distance to show the button
   const handleScroll = () => {
     const scrollY = window.scrollY;
-    const showThreshold = 300; // Adjust this threshold as needed
+    const showThreshold = 300;
 
     setIsVisible(scrollY > showThreshold);
   };
