@@ -18,7 +18,7 @@ import sf from "../../assets/sflogo.png";
 
 const experienceData = [
   {
-    name: 'APARJITHA - SUNDARAM DIRECT (sub division of Sundaram Finance)',
+    name: 'Sundaram Direct, Sundaram Finance',
     logo: sf,
     year: 'Nov 2022 – Present',
     place: 'Chennai, TN',
