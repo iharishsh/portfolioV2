@@ -1,8 +1,7 @@
 import "./Connect.css";
 import bento from "../../assets/bento.png";
-import x from "../../assets/x.svg";
 
-import { Copyright, GithubLogo, InstagramLogo, LinkedinLogo } from "@phosphor-icons/react";
+import { Copyright, GithubLogo, InstagramLogo, LinkedinLogo, XLogo } from "@phosphor-icons/react";
 
 const Connect = () => {
   return (
@@ -21,7 +20,7 @@ const Connect = () => {
             <GithubLogo size={50}/>
             </a>
             <a target='_blank' rel="noreferrer" alt="XLogo" title="X" href='https://twitter.com/iharishsh'>
-            <img className="company-logo" src={x} />
+            <XLogo size={50}/>
             </a>
             <a target='_blank' rel="noreferrer" alt="bentoLogo" title="Bento" href='https://bento.me/iharishsh'>
             <img className="company-logo" src={bento} />
