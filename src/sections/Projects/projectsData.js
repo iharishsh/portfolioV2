@@ -12,6 +12,10 @@ import carepulse from '../../assets/projects/carepulse/cover.png';
 import carepulsel from '../../assets/projects/carepulse/mac-register.png';
 import carepulsem from '../../assets/projects/carepulse/admin_mob.png';
 
+import board from '../../assets/projects/board/cover.png';
+import boardmobilehome from '../../assets/projects/board/mobile_home.jpeg';
+import boardmac from '../../assets/projects/board/mac.jpeg';
+
 //icons
 import htmlIcon from '../../assets/coding/html.svg';
 import cssIcon from '../../assets/coding/css.svg';
@@ -28,6 +32,10 @@ import shadcn from '../../assets/coding/shadcn.png';
 import sentry from '../../assets/coding/sentry.png';
 import twilio from '../../assets/coding/twilio.png';
 import appwrite from '../../assets/coding/appwrite.svg';
+import clerk from '../../assets/coding/clerk.svg';
+import convex from '../../assets/coding/convex.svg';
+import liveblocks from '../../assets/coding/liveblocks.svg';
+import stripe from '../../assets/coding/stripe.svg';
 
 const projectsData = [
   {
@@ -137,6 +145,39 @@ const projectsData = [
     tech: [nextjs, tailwindcss, shadcn, appwrite, sentry, twilio],
     githubLink: 'https://github.com/iharishsh/carepulse',
     siteLink: 'https://carepulse-orcin-alpha.vercel.app/',
+  },
+  {
+    title: 'Board - Miro clone',
+    cover: board,
+    imgs: [boardmobilehome, boardmac],
+    description: 'A collaborative, real-time whiteboard with real-time database, whiteboard from scratch with ability to add shapes like Rectangles and Ellipses, Sticky notes and Pencil drawing. Using Next.js, Clerk, Convex, Liveblocks and Stripe.',
+    projectOverview: {
+      keyFeatures: [
+        "🛠️ Whiteboard from scratch.",
+        "🧰 Toolbar with Text, Shapes, Sticky Notes & Pencil.",
+        "🪄 Layering functionality.",
+        "🎨 Coloring system.",
+        "↩️ Undo & Redo functionality.",
+        "⌨️ Keyboard shortcuts.",
+        "🤝 Real-time collaboration.",
+        "💾 Real-time database.",
+        "🔐 Auth, organisations and invites.",
+        "⭐️ Favoriting functionality.",
+        "🌐 Next.js 14 framework.",
+        "💅 TailwindCSS & ShadcnUI styling.",
+      ],
+      goalsAchieved: [
+        "<b>Full-Stack Development</b>: Successfully built a full-stack application using NextJS, Clerk, Convex, Liveblocks and Stripe.",
+        "<b>Real time change</b>: Implemented Live update changes and collaboration.",
+      ],
+      futurePlans: [
+        "Continuous Learning: Stay updated on NextJS and More projects using Baas and payment integration.",
+      ],
+      status: ["Finished"]
+    },
+    tech: [nextjs, tailwindcss, shadcn, clerk, convex, liveblocks, stripe],
+    githubLink: 'https://github.com/iharishsh/board',
+    siteLink: 'https://board-five-xi.vercel.app/',
   }
 ];
 
